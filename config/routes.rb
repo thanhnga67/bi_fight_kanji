@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   get "statistics" => "static_pages#statistics"
 
-  devise_for :users  
+  devise_for :users
   resources :user_goals
+  resources :user_logs
 
   get "users/:id" => "users/user#show"
   get "users" => "users/user#index"
