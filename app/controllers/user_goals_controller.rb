@@ -6,6 +6,9 @@ class UserGoalsController < ApplicationController
   # GET /user_goals.json
   def index
     @user_goals = UserGoal.all
+    @word_goals = current_user.user_goals.all
+    @user_logs = UserLog.all
+    @word_logs = current_user.user_logs.all
   end
 
   # GET /user_goals/1

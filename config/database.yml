@@ -14,8 +14,8 @@ default: &default_postgres
   encoding: unicode
   database: bi_fight_kanji
   pool: 5
-  username: postgres
-  password: postgres
+  username: admin
+  password: 123456
 
 development:
   <<: *default_postgres
