@@ -1,5 +1,5 @@
 class UserGoalsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :logged_in_user
   before_action :set_user_goal, only: [:show, :edit, :update, :destroy]
 
   def index

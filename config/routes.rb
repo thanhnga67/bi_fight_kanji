@@ -1,16 +1,24 @@
 Rails.application.routes.draw do
-  root "static_pages#home"
-
-  get "statistics" => "static_pages#statistics"
-
-  devise_for :users  
-  resources :user_goals
-
-  get "users/:id" => "users/user#show"
-  get "users" => "users/user#index"
-
-  post "users/friend_request" => "users/friend#create"
-  delete "users/friend_request" => "users/friend#destroy"
-  put "users/friend_request" => "users/friend#update"
-
+  scope "(:locale)", locale: /en|ja|vi/ do
+    root "static_pages#home"
+    get "help" => "static_pages#help"
+    get "signup" => "users#new"
+    get "login" => "sessions#new"
+    post "login" => "sessions#create"
+    delete "logout" => "sessions#destroy"
+    resources :users
+    resources :relationships, only: [:create, :destroy]
+    resources :categories, only: [:index]
+    resources :user_goals
+    namespace :admin do
+      root "users#index"
+      resources :users, except: [:new, :create, :edit]
+      resources :words, except: [:new, :show, :destroy]
+    end
+    resources :lessons, except: [:new, :create, :destroy]
+    resources :categories do
+      resources :lessons, only: :create
+      resources :words, only: :index
+    end
+  end  
 end

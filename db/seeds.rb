@@ -5,10 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-u = User.first
-
-1.times do |index|
-  userLogs = u.user_logs.build log_type: "goals", target: "user_goals", number_of_word: Faker::Number.between(1, 10)
-  userLogs.save
-end
+User.create!(name: "betonamu", email: "betonamu@mail.com", password: "betonamu", role: 1)
+User.create!(name: "tranee", email: "tranee@mail.com", password: "tranee", role: 0)
