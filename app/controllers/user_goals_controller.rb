@@ -4,9 +4,9 @@ class UserGoalsController < ApplicationController
 
   def index
     @user_goals = UserGoal.all
-    @word_goals = current_user.user_goals.all
+    @word_goals = current_user.user_goals
     @user_logs = UserLog.all
-    @word_logs = current_user.user_logs.all
+    @word_logs = current_user.user_logs
   end
 
   def show

@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   has_many :followers, through: :followers_relationships, source: :follower
 
   has_many :user_goals
+  has_many :user_logs
 
   has_secure_password
 

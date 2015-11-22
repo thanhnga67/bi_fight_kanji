@@ -23,6 +23,7 @@ en:
     home:
       btn_words: "Category"
       btn_lessons: "Lessons"
+      btn_goals: "Goals"
     help:
       h3: "You can contact with administrators:"
   users:
