@@ -2,7 +2,7 @@ ja:
   wait: "お待ちください。。。。"
   layouts: 
     header:
-      website: "Framgia eLearning"
+      website: "Fight Kanji"
       home: "ホーム"
       help: "ヘルプ"
       log_in: "ログイン"
@@ -18,7 +18,7 @@ ja:
       home: "ホーム"
       help: "ヘルプ"
     application:
-      title: "Fels"
+      title: "Bi Group"
   static_pages:
     home:
       btn_words: "カテゴリ"
@@ -153,10 +153,10 @@ ja:
       all_lesson: "Show lesson"
       user_role: "This user's role"
       btn_save: "変更する"
-      false_result: "False"
+      false_result: "失敗"
     edit:
       submit: "サミット"
-      submit_confirm: "Submit your answer?"
+      submit_confirm: "送信する?"
   helpers:
     sessions:
       name_of_role:
